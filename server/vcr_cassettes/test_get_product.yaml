@@ -1,0 +1,46 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.19.1]
+    method: GET
+    uri: https://api.walmartlabs.com/v1/items/651779321?format=json&apiKey=9sv4rrrm24npjbd6aq9zaffh
+  response:
+    body: {string: '{"itemId":651779321,"parentItemId":651779321,"name":"Refurbished
+        iPhone 5S 16GB Gold Unlocked","msrp":129.95,"salePrice":91.99,"upc":"459259973878","categoryPath":"Cell
+        Phones/iPhones/Refurbished iPhones/Refurbished iPhone 5S","shortDescription":"This
+        item is refurbished which means the it will have some cosmetic imperfection
+        on front, back or side of item. It is unlocked to work on any GSM carrier
+        such as AT and T-Mobile. This phone will not work on CDMA Networks such as,
+        but not limited to, Sprint, Verizon, Boost and U.S. Cellular. This slim yet
+        powerful iPhone 5S boasts a four-inch Retina display that makes your apps
+        and videos look great and an intuitive iOS that''s easy to navigate. The four-inch
+        retina display, named for a pixel size that''s invisible to the naked eye,
+        packs a ton of resolution, filling photos and video with rich detail and vibrant
+        colors while rendering smooth text that''s easy to read. It is unlocked to
+        work on any GSM carrier such as AT and T-Mobile. This phone will not work
+        on CDMA Networks such as, but not limited to, Sprint, Verizon, Boost and U.S.
+        Cellular.","longDescription":"&lt;br&gt; &lt;br&gt; &lt;b&gt;Sound and Music:&lt;/b&gt;
+        &lt;ul&gt;&lt;li&gt;Music player&lt;/li&gt;&lt;li&gt;Popular ringtone formats&lt;/li&gt;&lt;/ul&gt;&lt;b&gt;Mobile
+        Features:&lt;/b&gt; &lt;ul&gt;&lt;li&gt;802.11a/b/g/n WiFi&lt;/li&gt;&lt;li&gt;Bluetooth
+        4.0 wireless technology&lt;/li&gt;&lt;li&gt;GPS: assisted GPS and GLONASS&lt;/li&gt;&lt;li&gt;8MP
+        iSight camera for photos&lt;/li&gt;&lt;li&gt;1080p HD video recording&lt;/li&gt;&lt;li&gt;FaceTime
+        HD camera&lt;/li&gt;&lt;li&gt;Chip: A7 with 64-bit architecture and M7 coprocessor&lt;/li&gt;&lt;li&gt;Built-in
+        speaker&lt;/li&gt;&lt;li&gt;Built-in microphone&lt;/li&gt;&lt;li&gt;3.5mm
+        stereo headphone mini jack&lt;/li&gt;&lt;li&gt;SIM card tray&lt;/li&gt;&lt;li&gt;Lightning
+        connector&lt;/li&gt;&lt;/ul&gt;&lt;b&gt;Technical Profile:&lt;/b&gt; &lt;ul&gt;&lt;li&gt;Talk
+        time: up to 10 h&lt;/li&gt;&lt;li&gt;Standby time: up to 250 h&lt;/li&gt;&lt;li&gt;Built-in
+        rechargeable lithium-ion battery&lt;/li&gt;&lt;/ul&gt;&lt;b&gt;Display:&lt;/b&gt;
+        &lt;ul&gt;&lt;li&gt;4&quot; multi-touch Retina display&lt;/li&gt;&lt;li&gt;Resolution:
+        1136 x 640&lt;/li&gt;&lt;/ul&gt;&lt;b&gt;Messaging:&lt;/b&gt; &lt;ul&gt;&lt;li&gt;SMS
+        and MMS&lt;/li&gt;&lt;li&gt;Email&lt;/li&gt;&lt;li&gt;Instant Messaging&lt;/li&gt;&lt;/ul&gt;&lt;b&gt;Included:&lt;/b&gt;
+        &lt;ul&gt;&lt;li&gt;Battery&lt;/li&gt;&lt;li&gt;USB cable&lt;/li&gt;&lt;li&gt;Charger&lt;/li&gt;&lt;/ul&gt;","brandName":"Apple","thumbnailImage":"https://i5.walmartimages.com/asr/df78c52d-944c-4921-9c70-f3b579296f08_1.69440d1eb6493169b4aa79f502997a2c.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF","mediumImage":"https://i5.walmartimages.com/asr/df78c52d-944c-4921-9c70-f3b579296f08_1.69440d1eb6493169b4aa79f502997a2c.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF","largeImage":"https://i5.walmartimages.com/asr/df78c52d-944c-4921-9c70-f3b579296f08_1.69440d1eb6493169b4aa79f502997a2c.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF","productTrackingUrl":"http://linksynergy.walmart.com/fs-bin/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=https%253A%252F%252Fwww.walmart.com%252Fip%252FRefurbished-iPhone-5S-16GB-Gold-Unlocked%252F651779321%253Faffp1%253DxQ0tpG_LdHbmPKQF4S3KbH5hoNl12S5YM6bqxNES_S8%2526affilsrc%253Dapi","standardShipRate":0.0,"color":"Gold","marketplace":true,"sellerInfo":"Smarter","productUrl":"http://c.affil.walmart.com/t/api01?l=https%3A%2F%2Fwww.walmart.com%2Fip%2FRefurbished-iPhone-5S-16GB-Gold-Unlocked%2F651779321%3Faffp1%3DxQ0tpG_LdHbmPKQF4S3KbH5hoNl12S5YM6bqxNES_S8%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi","customerRating":"3.0","numReviews":2,"customerRatingImage":"http://i2.walmartimages.com/i/CustRating/3.gif","categoryNode":"1105910_1127173_4907762","rhid":"27476","bundle":false,"clearance":false,"preOrder":false,"stock":"Available","attributes":{"actualColor":"Gold","color":"Gold","prodClassType":"REGULAR"},"addToCartUrl":"http://c.affil.walmart.com/t/api01?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D651779321%7C1%26affp1%3DxQ0tpG_LdHbmPKQF4S3KbH5hoNl12S5YM6bqxNES_S8%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi","affiliateAddToCartUrl":"http://linksynergy.walmart.com/fs-bin/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Faffil.walmart.com%252Fcart%252FaddToCart%253Fitems%253D651779321%257C1%2526affp1%253DxQ0tpG_LdHbmPKQF4S3KbH5hoNl12S5YM6bqxNES_S8%2526affilsrc%253Dapi","freeShippingOver35Dollars":false,"imageEntities":[{"thumbnailImage":"https://i5.walmartimages.com/asr/750291b1-df7c-450c-8fdc-33a078c5a320_1.08f8e4a84cc3dd254d17cca5fe2d2981.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF","mediumImage":"https://i5.walmartimages.com/asr/750291b1-df7c-450c-8fdc-33a078c5a320_1.08f8e4a84cc3dd254d17cca5fe2d2981.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF","largeImage":"https://i5.walmartimages.com/asr/750291b1-df7c-450c-8fdc-33a078c5a320_1.08f8e4a84cc3dd254d17cca5fe2d2981.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF","entityType":"SECONDARY"},{"thumbnailImage":"https://i5.walmartimages.com/asr/dc85c967-7206-4489-a70e-e9251d6917a1_1.fe3e3c646e4b53899caa966252b50fc8.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF","mediumImage":"https://i5.walmartimages.com/asr/dc85c967-7206-4489-a70e-e9251d6917a1_1.fe3e3c646e4b53899caa966252b50fc8.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF","largeImage":"https://i5.walmartimages.com/asr/dc85c967-7206-4489-a70e-e9251d6917a1_1.fe3e3c646e4b53899caa966252b50fc8.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF","entityType":"SECONDARY"},{"thumbnailImage":"https://i5.walmartimages.com/asr/eba4c214-1d72-4442-91fe-3c25f0d39160_1.670dacbf63d74cb338b41b70bfdf7edf.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF","mediumImage":"https://i5.walmartimages.com/asr/eba4c214-1d72-4442-91fe-3c25f0d39160_1.670dacbf63d74cb338b41b70bfdf7edf.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF","largeImage":"https://i5.walmartimages.com/asr/eba4c214-1d72-4442-91fe-3c25f0d39160_1.670dacbf63d74cb338b41b70bfdf7edf.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF","entityType":"SECONDARY"},{"thumbnailImage":"https://i5.walmartimages.com/asr/df78c52d-944c-4921-9c70-f3b579296f08_1.69440d1eb6493169b4aa79f502997a2c.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF","mediumImage":"https://i5.walmartimages.com/asr/df78c52d-944c-4921-9c70-f3b579296f08_1.69440d1eb6493169b4aa79f502997a2c.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF","largeImage":"https://i5.walmartimages.com/asr/df78c52d-944c-4921-9c70-f3b579296f08_1.69440d1eb6493169b4aa79f502997a2c.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF","entityType":"PRIMARY"}],"offerType":"ONLINE_ONLY","availableOnline":true}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['6795']
+      Content-Type: [application/json; charset=utf-8]
+      Date: ['Sat, 11 Aug 2018 13:02:14 GMT']
+      Server: [Mashery Proxy]
+    status: {code: 200, message: OK}
+version: 1

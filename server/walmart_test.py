@@ -9,3 +9,10 @@ def test_get_search_products():
     search_result = walmart.get_search_products(example_query)
     assert search_result["query"] == example_query
     assert len(search_result["items"]) == search_result["numItems"]
+
+
+@vcr.use_cassette()
+def test_get_product():
+    example_item_id = "651779321"
+    product = walmart.get_product(example_item_id)
+    assert product['itemId'] == int(example_item_id)
