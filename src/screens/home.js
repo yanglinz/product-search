@@ -1,6 +1,8 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
+import logo from "../assets/logo.svg";
+
 class SearchInput extends React.Component {
   state = {
     searchQuery: ""
@@ -42,7 +44,7 @@ function HomeScreen(props) {
 
   return (
     <div className="HomeScreen">
-      <h1>Home</h1>
+      <img src={logo} alt="Walmart" />
 
       <SearchInput history={history} />
     </div>
