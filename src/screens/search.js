@@ -21,7 +21,7 @@ class SearchScreen extends React.Component {
     const { searchQuery } = this.state;
     return (
       <div className="SearchScreen">
-        <h1>SearchScreen</h1>
+        <h1>Search</h1>
 
         <SearchResultList searchQuery={searchQuery} />
       </div>

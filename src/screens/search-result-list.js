@@ -16,8 +16,7 @@ function SearchResultList(props) {
 
   return (
     <div>
-      <h1>Search Results</h1>
-      <h2>{searchQuery}</h2>
+      <h1>Search Results for "{searchQuery}"</h1>
 
       <Query query={SEARCH_RESULTS_QUERY} variables={{ query: searchQuery }}>
         {({ loading, error, data }) => {

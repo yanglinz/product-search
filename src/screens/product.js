@@ -3,7 +3,7 @@ import React from "react";
 function ProductScreen() {
   return (
     <div className="ProductScreen">
-      <h1>ProductScreen</h1>
+      <h1>Product</h1>
     </div>
   );
 }
