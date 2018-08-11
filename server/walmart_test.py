@@ -15,4 +15,11 @@ def test_get_search_products():
 def test_get_product():
     example_item_id = "651779321"
     product = walmart.get_product(example_item_id)
-    assert product['itemId'] == int(example_item_id)
+    assert product["itemId"] == int(example_item_id)
+
+
+@vcr.use_cassette()
+def test_get_product_recommendations():
+    example_item_id = "631796609"
+    recommendations = walmart.get_product_recommendations(example_item_id)
+    assert len(recommendations) == 25
