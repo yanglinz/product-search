@@ -1,4 +1,25 @@
-# Byte-compiled / optimized / DLL files
+# JS dependencies
+/node_modules
+
+# JS testing
+/coverage
+
+# JS build 
+/build
+
+# JS logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# JS misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -6,7 +27,7 @@ __pycache__/
 # C extensions
 *.so
 
-# Distribution / packaging
+# Python distribution
 .Python
 build/
 develop-eggs/
@@ -31,11 +52,11 @@ MANIFEST
 *.manifest
 *.spec
 
-# Installer logs
+# Python installer logs
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit test / coverage reports
+# Python testing
 htmlcov/
 .tox/
 .coverage
@@ -69,7 +90,7 @@ docs/_build/
 # PyBuilder
 target/
 
-# Jupyter Notebook
+# Jupyter notebook
 .ipynb_checkpoints
 
 # pyenv
