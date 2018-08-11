@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
+    "graphene_django",
 ]
 
 MIDDLEWARE = [
@@ -128,6 +129,10 @@ STATICFILES_DIRS = [os.path.join(PROJECT_ROOT, "static")]
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+# Django graphene
+# http://docs.graphene-python.org/projects/django/en/latest/
+GRAPHENE = {"SCHEMA": "server.graphql.schema"}
 
 # Application variables
 
