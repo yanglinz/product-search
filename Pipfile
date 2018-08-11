@@ -16,6 +16,7 @@ gunicorn = "*"
 requests = "*"
 graphene = ">=2.0"
 graphene-django = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 pytest = "*"

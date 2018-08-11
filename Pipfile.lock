@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "09e7058cb64e9a647d01cabaf12484200df4d26f57fa02c5be1235d1ef1b5ae6"
+            "sha256": "de30d927664b4d3a7df26fb61c9665cfd6b646518b9fc89ab887ad6aa44eae3d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -80,6 +80,14 @@
                 "sha256:ea50d85709708621d956187c6b61d9f9ce155007b496dd914fdb35db8d790aec"
             ],
             "version": "==2.1"
+        },
+        "django-cors-headers": {
+            "hashes": [
+                "sha256:5545009c9b233ea7e70da7dbab7cb1c12afa01279895086f98ec243d7eab46fa",
+                "sha256:c4c2ee97139d18541a1be7d96fe337d1694623816d83f53cb7c00da9b94acae1"
+            ],
+            "index": "pypi",
+            "version": "==2.4.0"
         },
         "django-dotenv": {
             "hashes": [
@@ -323,26 +331,26 @@
         },
         "multidict": {
             "hashes": [
-                "sha256:1a3032c661ef0735679fa7780cc92e3add16eec08cd5b43e99a1f878d6dbe39c",
-                "sha256:21366445ac0f84b6d0f96a519b2cf26109322336d80a32c8d1c2d639140f004a",
-                "sha256:29880760c506afa13e7b1840210c5f10bbbe26d049c4ba7a5d4ab79e08999997",
-                "sha256:3fe7da7e1596f39b22b0976435a63f79a3cb747a153529a3902237091e32eeb2",
-                "sha256:47364f6d376beafd17a886f717417e1cae6c32e9d265283a12940b126eeb1e05",
-                "sha256:5985102644d8e9ea87facb7a6eddb84994b9a25b64eba939695bbe2b036a7d5c",
-                "sha256:5aa50bcd4787c1945166557dbdb363afc1b07f54110ba09b4fadc7d36701c67f",
-                "sha256:8cc41982cedfe3d55db05b5300797815d1e762831a68158d4e85ea9a22ed9276",
-                "sha256:8cec6b11e90968d33a225512b3aa733c3b0721ad340f0d97abfd83143b4f3d35",
-                "sha256:902303d51b16d584f24f2ca4bf480de44ab88d1d619fac39b89115a53a144e53",
-                "sha256:92913fc5c958d9bbe6f6d9e01064698d03d9fa5841c5cef3b71ae867aa8b93ab",
-                "sha256:a089a8212b46a10f74846961b5670e09fc3ed2a6fdf3a5e85eee67ae3e2af313",
-                "sha256:a3f320befb1b309d0c52b4b754d127132dbb634c2460840c4999378920f00701",
-                "sha256:ab06072757e62e28316023bbec37d54abe7a9b702e8f888c69ab94e74e7851f9",
-                "sha256:ab109b6577148556cbcc9c960b50836e29b0bef416f9a2571f28217f8b47f0ee",
-                "sha256:d4bbbdd6433b07691e7bfb308d761f261bbe378743262b02857b27b70f65ee7b",
-                "sha256:da885aa19742dba8fad774aa16d83cc0f516b27e04bf93b061a5763b27aefef9"
+                "sha256:293100d6afe4299477720e822754776b41adfecc181fb8ab7f7046dccc39fade",
+                "sha256:446a4f6536f501d27090e74caddc407519aeef64fe61b8b2770904e6466ca307",
+                "sha256:514aa906bcff3a188bec72ba47297d367eadb3156d8482069f0a42432ba73d05",
+                "sha256:6384c6c8cc5574284b0a6a4c64bf788993745bf36c2148089fccb0d1751483f4",
+                "sha256:698c3e9efeea82176c44e8d6882225e329b443503b4a9e343dcb18600852cc21",
+                "sha256:917c0f805806cc75c0e8e3be2ac21ceb9f239568fbc00eb9862b5021954e7645",
+                "sha256:9558d9586f0b55dc319684f1c44eddc3aedbb571c773fc3893f48ab503210434",
+                "sha256:b986826d9500e10135fd79f84e6f33e9252f31fe16968d143599cf4bb292315e",
+                "sha256:c1fa75dca3e0e0960bbecaff7e39da787fed7e74a99450ae44cd512a667f1caf",
+                "sha256:cc4ea8f7c39c4b0644609aa1d2679de097f0b8a7e65cd2ae2b4ebbdabab84ea6",
+                "sha256:cf2fb7806b165ed7f11fb7e1d918f032e24309ce67dd1be551965dbe93c1050b",
+                "sha256:d105f88240c729e9f078385e17a5f740a1799b1401fbb3986c42eac01cca5c94",
+                "sha256:e4cafb7194100280b773a77defa007dba826740269db20cf46abade76fae9935",
+                "sha256:e9a1793402ff1d5a2209d366046c9141ed3019d4582f70a1f9eb4008d9f49be9",
+                "sha256:eb365f5bde2849cbac102e0259536fd843d2cd08960d54cd8f9b3ef2dd2e6a5f",
+                "sha256:ec2604536428a020846bdcb7ecd33cf895628e62567fba1443c06185b756c05e",
+                "sha256:ecd3f3fc78261bd8ca5b1a1204c3241691bb55d0b5ea2f52647686f690c2c1a6"
             ],
             "markers": "python_version >= '3.4.1'",
-            "version": "==4.4.0a7"
+            "version": "==4.4.0a10"
         },
         "pluggy": {
             "hashes": [
