@@ -13,3 +13,4 @@ gunicorn = "*"
 black = "*"
 
 [dev-packages]
+pytest = "*"
