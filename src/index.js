@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { ApolloProvider } from "react-apollo";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import HomeScreen from "./screens/home";
 import SearchScreen from "./screens/search";
 import ProductScreen from "./screens/product";
+import apolloClient from "./graphql";
 
 import "./index.css";
 
@@ -24,7 +26,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <AppRoutes />
+        <ApolloProvider client={apolloClient}>
+          <AppRoutes />
+        </ApolloProvider>
       </div>
     );
   }
