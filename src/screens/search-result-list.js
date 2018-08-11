@@ -15,6 +15,10 @@ const SEARCH_RESULTS_QUERY = gql`
 function SearchResultList(props) {
   const { searchQuery } = props;
 
+  if (!searchQuery) {
+    return null;
+  }
+
   return (
     <div>
       <h1>Search Results for "{searchQuery}"</h1>
