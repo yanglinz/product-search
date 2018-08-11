@@ -32,13 +32,18 @@ class Query(graphene.ObjectType):
     """Root query
     """
 
+    product_detail = graphene.Field(Product, id=graphene.ID())
     search_products = graphene.List(Product, query=graphene.String())
+
+    def resolve_product_detail(self, info, **kwargs):
+        product_id = kwargs["id"]
+        product = walmart.get_product(product_id)
+        return Product.from_api_object(product)
 
     def resolve_search_products(self, info, **kwargs):
         query = kwargs["query"]
         products = walmart.get_search_products(query)
-        products_attrs = [{"item_id": p["itemId"]} for p in products["items"]]
-        return [Product(**attrs) for attrs in products_attrs]
+        return [Product.from_api_object(p) for p in products["items"]]
 
 
 schema = graphene.Schema(query=Query)
