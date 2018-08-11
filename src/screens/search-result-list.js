@@ -3,8 +3,8 @@ import gql from "graphql-tag";
 import { Query } from "react-apollo";
 
 const SEARCH_RESULTS_QUERY = gql`
-  query SearchResultsQuery {
-    searchProducts(query: "123") {
+  query SearchResultsQuery($query: String!) {
+    searchProducts(query: $query) {
       itemId
       name
     }
@@ -19,7 +19,7 @@ function SearchResultList(props) {
       <h1>Search Results</h1>
       <h2>{searchQuery}</h2>
 
-      <Query query={SEARCH_RESULTS_QUERY}>
+      <Query query={SEARCH_RESULTS_QUERY} variables={{ query: searchQuery }}>
         {({ loading, error, data }) => {
           const { searchProducts } = data || {};
 
