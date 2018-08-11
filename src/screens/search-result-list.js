@@ -1,5 +1,6 @@
 import React from "react";
 import gql from "graphql-tag";
+import { Link } from "react-router-dom";
 import { Query } from "react-apollo";
 
 const SEARCH_RESULTS_QUERY = gql`
@@ -28,7 +29,9 @@ function SearchResultList(props) {
           return (
             <div>
               {searchProducts.map(p => (
-                <h2 key={p.itemId}>{p.name}</h2>
+                <h2 key={p.itemId}>
+                  <Link to={`/product/${p.itemId}`}>{p.name}</Link>
+                </h2>
               ))}
             </div>
           );
