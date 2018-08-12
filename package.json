@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "format": "prettier --write './*.{js,md}' './src/**/*.{js,css}'"
@@ -19,6 +20,8 @@
     "react-scripts": "1.1.4"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.10",
+    "@storybook/react": "^3.4.10",
     "prettier": "^1.14.2"
   }
 }
