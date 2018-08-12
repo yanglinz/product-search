@@ -3,6 +3,8 @@ import { withRouter } from "react-router-dom";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 
+import Header from "../components/header";
+
 const PRODUCT_DETAIL_QUERY = gql`
   query ProductDetailQuery($itemId: ID!) {
     productDetail(id: $itemId) {
@@ -18,6 +20,8 @@ function ProductScreen(props) {
 
   return (
     <div className="ProductScreen">
+      <Header />
+
       <h1>Product</h1>
 
       <Query query={PRODUCT_DETAIL_QUERY} variables={{ itemId }}>

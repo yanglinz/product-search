@@ -4,6 +4,8 @@ import gql from "graphql-tag";
 import { Link, withRouter } from "react-router-dom";
 import { Query } from "react-apollo";
 
+import Header from "../components/header";
+
 const SEARCH_RESULTS_QUERY = gql`
   query SearchResultsQuery($query: String!) {
     searchProducts(query: $query) {
@@ -63,6 +65,8 @@ class SearchScreen extends React.Component {
     const { searchQuery } = this.state;
     return (
       <div className="SearchScreen">
+        <Header />
+
         <h1>Search</h1>
 
         <SearchResultList searchQuery={searchQuery} />
