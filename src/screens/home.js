@@ -1,7 +1,9 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
+import Header from "../components/header";
 import logo from "../assets/logo.svg";
+import "./home.css";
 
 class SearchInput extends React.Component {
   state = {
@@ -41,9 +43,17 @@ function HomeScreen(props) {
 
   return (
     <div className="HomeScreen">
-      <img src={logo} alt="Walmart" />
+      <Header />
 
-      <SearchInput history={history} />
+      <div className="HomeScreen-content">
+        <div className="HomeScreen-brand">
+          <img src={logo} alt="Walmart" />
+        </div>
+
+        <div className="HomeScreen-search">
+          <SearchInput history={history} />
+        </div>
+      </div>
     </div>
   );
 }

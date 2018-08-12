@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import logoSmall from "../assets/logo-small.svg";
-
 import "./header.css";
 
 function Header() {
