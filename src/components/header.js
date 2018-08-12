@@ -6,6 +6,7 @@ import logoSmall from "../assets/logo-small.svg";
 import "./header.css";
 
 function Header() {
+  const ghLink = "https://github.com/yanglinz/product-search";
   return (
     <div className="Header">
       <div className="Header-brand">
@@ -17,7 +18,7 @@ function Header() {
       </div>
 
       <div className="Header-github">
-        <a href="https://github.com/yanglinz/product-search">Source</a>
+        <a href={ghLink}>Source</a>
       </div>
     </div>
   );
