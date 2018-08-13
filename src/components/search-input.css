@@ -1,0 +1,7 @@
+.SearchInput {
+  display: flex;
+}
+
+.SearchInput-input {
+  flex-grow: 1;
+}

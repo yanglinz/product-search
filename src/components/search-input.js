@@ -33,13 +33,14 @@ class SearchInput extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="SearchInput" onSubmit={this.handleSubmit}>
         <input
+          className="SearchInput-input"
           type="text"
           value={this.props.value || this.state.value}
           onChange={this.handleChange}
         />
-        <input type="submit" value="Search" />
+        <input className="SearchInput-button" type="submit" value="Search" />
       </form>
     );
   }
