@@ -2,8 +2,8 @@
   padding: 30px;
 }
 
-.HomeScreen-brand {
-  text-align: center;
+.HomeScreen-logo {
+  width: 100%;
 }
 
 .HomeScreen-search {

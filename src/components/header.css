@@ -1,6 +1,4 @@
 .Header {
-  display: flex;
-  justify-content: space-between;
   padding: 30px;
 }
 
@@ -10,4 +8,8 @@
 
 .Header-logo-img {
   width: 30px;
+}
+
+.Header-github {
+  text-align: right;
 }

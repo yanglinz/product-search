@@ -45,13 +45,17 @@ function HomeScreen(props) {
     <div className="HomeScreen">
       <Header />
 
-      <div className="HomeScreen-content">
-        <div className="HomeScreen-brand">
-          <img src={logo} alt="Walmart" />
+      <div className="container-fluid">
+        <div className="HomeScreen-brand row center-xs">
+          <div className="col-xs-6">
+            <img className="HomeScreen-logo" src={logo} alt="Walmart" />
+          </div>
         </div>
 
-        <div className="HomeScreen-search">
-          <SearchInput history={history} />
+        <div className="HomeScreen-search row center-xs">
+          <div className="col-xs-6">
+            <SearchInput history={history} />
+          </div>
         </div>
       </div>
     </div>
