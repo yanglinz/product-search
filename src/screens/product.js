@@ -4,12 +4,16 @@ import gql from "graphql-tag";
 import { Query } from "react-apollo";
 
 import Header from "../components/header";
+import ProductDetail from "../components/product-detail";
 
 const PRODUCT_DETAIL_QUERY = gql`
   query ProductDetailQuery($itemId: ID!) {
     productDetail(id: $itemId) {
       itemId
       name
+      mediumImage
+      shortDescription
+      salePrice
     }
   }
 `;
@@ -22,22 +26,22 @@ function ProductScreen(props) {
     <div className="ProductScreen">
       <Header />
 
-      <h1>Product</h1>
+      <div className="SearchScreen-results container-fluid">
+        <div className="row center-xs">
+          <div className="col-xs-6">
+            <Query query={PRODUCT_DETAIL_QUERY} variables={{ itemId }}>
+              {({ loading, error, data }) => {
+                const { productDetail } = data || {};
 
-      <Query query={PRODUCT_DETAIL_QUERY} variables={{ itemId }}>
-        {({ loading, error, data }) => {
-          const { productDetail } = data || {};
+                if (loading) return <p>Loading...</p>;
+                if (error) return <p>Error :(</p>;
 
-          if (loading) return <p>Loading...</p>;
-          if (error) return <p>Error :(</p>;
-
-          return (
-            <div>
-              <h1>{productDetail.name}</h1>
-            </div>
-          );
-        }}
-      </Query>
+                return <ProductDetail {...productDetail} />;
+              }}
+            </Query>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
