@@ -1,7 +1,23 @@
-.SearchInput {
+.SearchInput-wrap {
   display: flex;
+  width: 100%;
+  padding: 7px;
+  border: 2px solid #c2cfd6;
 }
 
 .SearchInput-input {
   flex-grow: 1;
+  padding: 7px;
+  border: none;
+}
+
+.SearchInput-input:focus {
+  border: none;
+  outline: none;
+}
+
+.SearchInput-button {
+  padding: 3px 8px 0;
+  border: none;
+  background: none;
 }
