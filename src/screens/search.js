@@ -1,17 +1,22 @@
 import React from "react";
 import * as Qs from "qs";
 import gql from "graphql-tag";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { Query } from "react-apollo";
 
 import Header from "../components/header";
 import SearchInput from "../components/search-input";
+import ProductInfo from "../components/product-info";
+import "./search.css";
 
 const SEARCH_RESULTS_QUERY = gql`
   query SearchResultsQuery($query: String!) {
     searchProducts(query: $query) {
       itemId
       name
+      mediumImage
+      shortDescription
+      salePrice
     }
   }
 `;
@@ -32,11 +37,11 @@ function SearchResultList(props) {
         if (error) return <p>Error :(</p>;
 
         return (
-          <div>
+          <div className="SearchResultList">
             {searchProducts.map(p => (
-              <h2 key={p.itemId}>
-                <Link to={`/product/${p.itemId}`}>{p.name}</Link>
-              </h2>
+              <div className="SearchResultList-item">
+                <ProductInfo key={p.itemId} {...p} />
+              </div>
             ))}
           </div>
         );
@@ -88,7 +93,13 @@ class SearchScreen extends React.Component {
           />
         </Header>
 
-        <SearchResultList searchQuery={searchValue} />
+        <div className="SearchScreen-results container-fluid">
+          <div className="row center-xs">
+            <div className="col-xs-6">
+              <SearchResultList searchQuery={searchValue} />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
