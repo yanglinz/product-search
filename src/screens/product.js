@@ -5,6 +5,7 @@ import { Query } from "react-apollo";
 
 import Header from "../components/header";
 import ProductInfo from "../components/product-info";
+import ProductRecommendations from "../components/product-recommendations";
 
 const PRODUCT_DETAIL_QUERY = gql`
   query ProductDetailQuery($itemId: ID!) {
@@ -42,7 +43,12 @@ function ProductScreen(props) {
                 if (loading) return <p>Loading...</p>;
                 if (error) return <p>Error :(</p>;
 
-                return <ProductInfo {...productDetail} />;
+                return (
+                  <div className="SearchScreen-content">
+                    <ProductInfo {...productDetail} />
+                    <ProductRecommendations {...productDetail} />
+                  </div>
+                );
               }}
             </Query>
           </div>
