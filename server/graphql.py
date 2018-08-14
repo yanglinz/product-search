@@ -21,6 +21,9 @@ class Product(graphene.ObjectType):
 
     def resolve_recommended_products(self, info, **kwargs):
         recommended = walmart.get_product_recommendations(self.item_id)
+        if isinstance(recommended, dict) and recommended.get("errors"):
+            return []
+
         return [Product.from_api_object(p) for p in recommended]
 
     @classmethod

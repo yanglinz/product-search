@@ -14,6 +14,12 @@ const PRODUCT_DETAIL_QUERY = gql`
       largeImage
       shortDescription
       salePrice
+      recommendedProducts {
+        itemId
+        name
+        largeImage
+        salePrice
+      }
     }
   }
 `;
