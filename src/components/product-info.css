@@ -1,0 +1,25 @@
+.ProductInfo {
+  text-align: left;
+}
+
+.ProductInfo-thumb {
+  display: block;
+  width: 100%;
+}
+
+.ProductInfo-title {
+  margin-bottom: 12px;
+}
+
+.ProductInfo-price {
+  font-weight: bold;
+}
+
+.ProductInfo-thumb-img {
+  width: 100%;
+}
+
+.ProductInfo-description {
+  margin-top: 12px;
+  color: #444;
+}

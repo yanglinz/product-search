@@ -14,7 +14,7 @@ const SEARCH_RESULTS_QUERY = gql`
     searchProducts(query: $query) {
       itemId
       name
-      mediumImage
+      largeImage
       shortDescription
       salePrice
     }
@@ -95,7 +95,7 @@ class SearchScreen extends React.Component {
 
         <div className="SearchScreen-results container-fluid">
           <div className="row center-xs">
-            <div className="col-xs-6">
+            <div className="col-xs-12">
               <SearchResultList searchQuery={searchValue} />
             </div>
           </div>

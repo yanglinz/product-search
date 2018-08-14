@@ -24,7 +24,7 @@ function Header(props) {
           <a href={ghLink} target="_blank">
             <span className="Header-github-text">Source</span>
             <span className="Header-github-logo">
-              <HeaderGithubLogo width="11" height="11" fill="#444"/>
+              <HeaderGithubLogo width="11" height="11" fill="#444" />
             </span>
           </a>
         </div>
