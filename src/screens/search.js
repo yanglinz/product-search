@@ -39,8 +39,8 @@ function SearchResultList(props) {
         return (
           <div className="SearchResultList">
             {searchProducts.map(p => (
-              <div className="SearchResultList-item">
-                <ProductInfo key={p.itemId} {...p} />
+              <div className="SearchResultList-item" key={p.itemId}>
+                <ProductInfo {...p} />
               </div>
             ))}
           </div>
