@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import HeaderGithubLogo from "./header-github-logo";
 import logoSmall from "../assets/logo-small.svg";
-import githubLogo from "../assets/github.svg";
 import "./header.css";
 
 function Header(props) {
@@ -24,7 +24,7 @@ function Header(props) {
           <a href={ghLink} target="_blank">
             <span className="Header-github-text">Source</span>
             <span className="Header-github-logo">
-              <img src={githubLogo} height="11" />
+              <HeaderGithubLogo width="11" height="11" fill="#444"/>
             </span>
           </a>
         </div>
