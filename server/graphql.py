@@ -9,11 +9,13 @@ class Product(graphene.ObjectType):
 
     item_id = graphene.ID()
     name = graphene.String()
-    sale_price = graphene.String()
+    sale_price = graphene.Float()
+    standard_ship_rate = graphene.Float()
     short_description = graphene.String()
     thumb_image = graphene.String()
     medium_image = graphene.String()
     large_image = graphene.String()
+    is_two_day_shipping_eligible = graphene.Boolean()
 
     recommended_products = graphene.List(lambda: Product)
 
@@ -27,6 +29,8 @@ class Product(graphene.ObjectType):
             item_id=api_object.get("itemId"),
             name=api_object.get("name"),
             sale_price=api_object.get("salePrice"),
+            standard_ship_rate=api_object.get("standardShipRate"),
+            is_two_day_shipping_eligible=api_object.get("isTwoDayShippingEligible"),
             short_description=api_object.get("shortDescription"),
             thumb_image=api_object.get("thumbnailImage"),
             medium_image=api_object.get("mediumImage"),
