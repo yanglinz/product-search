@@ -4,7 +4,7 @@ import gql from "graphql-tag";
 import { Query } from "react-apollo";
 
 import Header from "../components/header";
-import ProductDetail from "../components/product-detail";
+import ProductInfo from "../components/product-info";
 
 const PRODUCT_DETAIL_QUERY = gql`
   query ProductDetailQuery($itemId: ID!) {
@@ -36,7 +36,7 @@ function ProductScreen(props) {
                 if (loading) return <p>Loading...</p>;
                 if (error) return <p>Error :(</p>;
 
-                return <ProductDetail {...productDetail} />;
+                return <ProductInfo {...productDetail} />;
               }}
             </Query>
           </div>
