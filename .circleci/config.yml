@@ -48,7 +48,7 @@ jobs:
           command: wget -qO- 'https://cli.netlify.com/download/latest/linux' | tar xz
       - run:
           name: Deploy to netlify
-          command: ./netlifyctl -A $NETLIFY_AUTH_TOKEN -P build deploy
+          command: ./netlifyctl -A $NETLIFY_AUTH_TOKEN -b build deploy
 
 workflows:
   version: 2
