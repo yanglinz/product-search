@@ -21,13 +21,13 @@ class HomeScreen extends React.Component {
 
         <div className="container-fluid">
           <div className="HomeScreen-brand row center-xs">
-            <div className="col-xs-6">
+            <div className="col-xs-6 col-md-4">
               <img className="HomeScreen-logo" src={logo} alt="Walmart" />
             </div>
           </div>
 
           <div className="HomeScreen-search row center-xs">
-            <div className="col-xs-6">
+            <div className="col-xs-10 col-md-6">
               <SearchInput onSubmit={this.handleSubmit} />
             </div>
           </div>
