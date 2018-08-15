@@ -13,12 +13,3 @@
 .Header-github {
   text-align: right;
 }
-
-.Header-github a {
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.Header-github-text {
-  padding-right: 4px;
-}

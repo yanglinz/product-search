@@ -10,7 +10,7 @@ function Header(props) {
   return (
     <div className="Header container-fluid">
       <div className="row middle-xs">
-        <div className="Header-brand col-xs-3">
+        <div className="Header-brand col-xs-3 col-md-2">
           <h1 className="Header-logo">
             <Link to="/">
               <img className="Header-logo-img" src={logoSmall} alt="Walmart" />
@@ -18,14 +18,11 @@ function Header(props) {
           </h1>
         </div>
 
-        <div className="Header-main col-xs-6">{props.children}</div>
+        <div className="Header-main col-xs-6 col-md-8">{props.children}</div>
 
-        <div className="Header-github col-xs-3">
-          <a href={ghLink} target="_blank">
-            <span className="Header-github-text">Source</span>
-            <span className="Header-github-logo">
-              <HeaderGithubLogo width="11" height="11" fill="#444" />
-            </span>
+        <div className="Header-github col-xs-3 col-md-2 ">
+          <a title="Source code on Github" href={ghLink} target="_blank">
+            <HeaderGithubLogo width="16" height="16" fill="#444" />
           </a>
         </div>
       </div>
