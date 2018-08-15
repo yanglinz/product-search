@@ -35,7 +35,9 @@ function ProductRecommendation(props) {
 function ProductRecommendations(props) {
   const { recommendedProducts } = props;
 
-  if (!recommendedProducts) {
+  const hasRecommendedProducts =
+    recommendedProducts && recommendedProducts.length;
+  if (!hasRecommendedProducts) {
     return null;
   }
 
