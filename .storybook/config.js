@@ -1,8 +1,6 @@
 import { configure } from "@storybook/react";
 
-import "normalize.css/normalize.css";
-import "flexboxgrid/css/flexboxgrid.css";
-import "./base.css";
+import "../src/base.styles.js";
 
 function requireAll(requireContext) {
   return requireContext.keys().map(requireContext);

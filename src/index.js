@@ -8,8 +8,7 @@ import SearchScreen from "./screens/search";
 import ProductScreen from "./screens/product";
 import apolloClient from "./graphql";
 
-import "normalize.css/normalize.css";
-import "flexboxgrid/css/flexboxgrid.css";
+import "./base.styles.js";
 import "./index.css";
 
 function AppRoutes() {
