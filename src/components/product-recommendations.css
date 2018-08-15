@@ -1,3 +1,10 @@
 .ProductRecommendation {
   text-align: left;
+  margin-bottom: 12px;
+  padding-top: 15px;
+  border-top: 1px solid #c2cfd6;
+}
+
+.ProductRecommendation-thumb-img {
+  width: 100%;
 }

@@ -4,10 +4,30 @@ import { Link } from "react-router-dom";
 import "./product-recommendations.css";
 
 function ProductRecommendation(props) {
-  const { itemId, name } = props;
+  const { itemId, name, largeImage, salePrice } = props;
   return (
     <div className="ProductRecommendation">
-      <Link to={`/product/${itemId}`}>{name}</Link>
+      <div className="row">
+        <div className="ProductRecommendation-thumb col-xs-3">
+          <Link to={`/product/${itemId}`}>
+            <img
+              className="ProductRecommendation-thumb-img"
+              src={largeImage}
+              alt={name}
+            />
+          </Link>
+        </div>
+
+        <div className="ProductRecommendation-info col-xs-9">
+          <div className="ProductRecommendation-title">
+            <Link to={`/product/${itemId}`}>{name}</Link>
+          </div>
+
+          <div className="ProductRecommendation-price">
+            ${salePrice.toFixed(2)}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
