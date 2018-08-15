@@ -1,7 +1,16 @@
 [Settings]
-ID = "9f0e47db-3d33-4b33-9808-3a84d79ec03f"
+  ID = "799c779d-861e-4009-95ba-86a56bdac424"
+
+[Build]
+  Publish = ""
+  Functions = ""
 
 [[redirects]]
-  from = "/*"
+  from = "search/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "product/*"
   to = "/index.html"
   status = 200
