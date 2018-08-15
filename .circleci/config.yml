@@ -55,6 +55,9 @@ workflows:
       - deploy_frontend:
           requires:
             - build_frontend
+          filters:
+            branches:
+              only: master
       - deploy_server:
           requires:
             - build_frontend
