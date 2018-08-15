@@ -1,6 +1,31 @@
 version: 2
 
 jobs:
+  build_frontend:
+    docker:
+      - image: circleci/node:8-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          key: node-modules-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install
+      - save_cache:
+          key: node-modules-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+      - run:
+          name: Run build
+          command: yarn run build
+      - store_artifacts:
+          path: build
+          destination: build 
+      - persist_to_workspace:
+          root: .
+          paths:
+            - build
+
   deploy_server:
     docker:
       - image: buildpack-deps:trusty
@@ -11,11 +36,21 @@ jobs:
           command: |
             git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP.git master
 
+    deploy_frontend:
+      docker:
+        - image: alpine:3.6
+      steps:
+        - checkout
+
+
 workflows:
   version: 2
-  build-deploy:
+  main:
     jobs:
+      - build_frontend
       - deploy_server:
+          requires:
+            - build_frontend
           filters:
             branches:
               only: master
