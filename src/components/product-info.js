@@ -28,7 +28,10 @@ function ProductInfo(props) {
       </div>
 
       <div className="row">
-        <div className="ProductInfo-description">{shortDescription}</div>
+        <div
+          className="ProductInfo-description"
+          dangerouslySetInnerHTML={{ __html: shortDescription }}
+        />
       </div>
     </div>
   );

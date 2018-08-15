@@ -55,9 +55,12 @@ exports[`Storyshots ProductInfo default 1`] = `
     >
       <div
         className="ProductInfo-description"
-      >
-        Here's some description
-      </div>
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Here's some description",
+          }
+        }
+      />
     </div>
   </div>
 </div>
