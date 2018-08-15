@@ -6,4 +6,9 @@ import Header from "./header";
 
 storiesOf("Header", module)
   .addDecorator(story => <Router initialEntries={["/"]}>{story()}</Router>)
-  .add("default", () => <Header />);
+  .add("default", () => <Header />)
+  .add("with children", () => (
+    <Header>
+      <h1 style={{ textAlign: "center" }}>Hello world!</h1>
+    </Header>
+  ));
