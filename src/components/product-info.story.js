@@ -2,6 +2,7 @@ import React from "react";
 import { MemoryRouter as Router } from "react-router-dom";
 import { storiesOf } from "@storybook/react";
 
+import { Container } from "../../.storybook/helper";
 import ProductInfo from "./product-info";
 
 const defaultProps = {
@@ -12,14 +13,6 @@ const defaultProps = {
   shortDescription: "Here's some description",
   salePrice: 123.45
 };
-
-function Container(props) {
-  return (
-    <div style={{ width: props.width || 600, margin: "0 auto" }}>
-      {props.children}
-    </div>
-  );
-}
 
 storiesOf("ProductInfo", module)
   .addDecorator(story => <Router initialEntries={["/"]}>{story()}</Router>)
