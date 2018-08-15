@@ -6,6 +6,7 @@ import { Query } from "react-apollo";
 
 import Header from "../components/header";
 import Loading from "../components/loading";
+import ServiceError from "../components/service-error";
 import SearchInput from "../components/search-input";
 import ProductInfo from "../components/product-info";
 import "./search.css";
@@ -35,7 +36,10 @@ function SearchResultList(props) {
         const { searchProducts } = data || {};
 
         if (loading) return <Loading />;
-        if (error) return <p>Error :(</p>;
+        if (error)
+          return (
+            <ServiceError message="We could not load the search results." />
+          );
 
         return (
           <div className="SearchResultList">

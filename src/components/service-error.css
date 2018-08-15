@@ -1,0 +1,12 @@
+.ServiceError-icon {
+  font-size: 120px;
+  color: #c2cfd6;
+}
+
+.ServiceError-title {
+  font-size: 20px;
+}
+
+.ServiceError-message {
+  color: #444;
+}

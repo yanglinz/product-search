@@ -5,6 +5,7 @@ import { Query } from "react-apollo";
 
 import Header from "../components/header";
 import Loading from "../components/loading";
+import ServiceError from "../components/service-error";
 import ProductInfo from "../components/product-info";
 import ProductRecommendations from "../components/product-recommendations";
 import "./product.css";
@@ -43,7 +44,10 @@ function ProductScreen(props) {
                 const { productDetail } = data || {};
 
                 if (loading) return <Loading />;
-                if (error) return <p>Error :(</p>;
+                if (error)
+                  return (
+                    <ServiceError message="We could not find the item you were looking for." />
+                  );
 
                 return (
                   <div className="SearchScreen-content">
