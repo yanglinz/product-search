@@ -20,8 +20,9 @@ class Product(graphene.ObjectType):
     recommended_products = graphene.List(lambda: Product)
 
     def resolve_recommended_products(self, info, **kwargs):
-        recommended = walmart.get_product_recommendations(self.item_id)
-        if isinstance(recommended, dict) and recommended.get("errors"):
+        try:
+            recommended = walmart.get_product_recommendations(self.item_id)
+        except walmart.WalmartServiceRecommendationMissingException:
             return []
 
         return [Product.from_api_object(p) for p in recommended]
