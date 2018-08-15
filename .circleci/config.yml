@@ -42,7 +42,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: ./build
+          at: .
       - run:
           name: Install netlify cli
           command: wget -qO- 'https://cli.netlify.com/download/latest/linux' | tar xz
