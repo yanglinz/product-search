@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ProductRecommendation default 1`] = `
+<div
+  style={
+    Object {
+      "margin": "0 auto",
+      "width": 600,
+    }
+  }
+>
+  <div
+    className="ProductRecommendations container-fluid"
+  >
+    <div
+      className="row"
+    >
+      <h4
+        className="ProductRecommendations-title"
+      >
+        Customers also bought:
+      </h4>
+      <div
+        className="ProductRecommendation"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="ProductRecommendation-thumb col-xs-3"
+          >
+            <a
+              href="/product/123"
+              onClick={[Function]}
+            >
+              <img
+                alt="Some Product"
+                className="ProductRecommendation-thumb-img"
+                src="https://i5.walmartimages.com/asr/6fca43e4-052c-43de-9009-478dcc2c00c9_1.a50d81821ae86a50014a2cf7c841effb.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF"
+              />
+            </a>
+          </div>
+          <div
+            className="ProductRecommendation-info col-xs-9"
+          >
+            <div
+              className="ProductRecommendation-title"
+            >
+              <a
+                href="/product/123"
+                onClick={[Function]}
+              >
+                Some Product
+              </a>
+            </div>
+            <div
+              className="ProductRecommendation-price"
+            >
+              $
+              123.45
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ProductRecommendation"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="ProductRecommendation-thumb col-xs-3"
+          >
+            <a
+              href="/product/456"
+              onClick={[Function]}
+            >
+              <img
+                alt="Another Product"
+                className="ProductRecommendation-thumb-img"
+                src="https://i5.walmartimages.com/asr/6fca43e4-052c-43de-9009-478dcc2c00c9_1.a50d81821ae86a50014a2cf7c841effb.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF"
+              />
+            </a>
+          </div>
+          <div
+            className="ProductRecommendation-info col-xs-9"
+          >
+            <div
+              className="ProductRecommendation-title"
+            >
+              <a
+                href="/product/456"
+                onClick={[Function]}
+              >
+                Another Product
+              </a>
+            </div>
+            <div
+              className="ProductRecommendation-price"
+            >
+              $
+              123.45
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

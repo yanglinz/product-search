@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ServiceError default 1`] = `
+<div
+  className="ServiceError"
+>
+  <div
+    className="ServiceError-icon"
+  >
+    :(
+  </div>
+  <h2
+    className="ServiceError-title"
+  >
+    Oops! Something went wrong.
+  </h2>
+  <p
+    className="ServiceError-message"
+  >
+    This is some error message
+  </p>
+</div>
+`;

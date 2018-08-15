@@ -16,6 +16,9 @@ jobs:
           paths:
             - node_modules
       - run:
+          name: Run tests 
+          command: yarn test
+      - run:
           name: Run build
           command: yarn run build
       - persist_to_workspace:

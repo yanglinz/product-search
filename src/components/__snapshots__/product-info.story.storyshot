@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ProductInfo default 1`] = `
+<div
+  style={
+    Object {
+      "margin": "0 auto",
+      "width": 600,
+    }
+  }
+>
+  <div
+    className="ProductInfo container-fluid"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="ProductInfo-thumb"
+      >
+        <a
+          href="/product/123"
+          onClick={[Function]}
+        >
+          <img
+            alt="Some Product"
+            className="ProductInfo-thumb-img"
+            src="https://i5.walmartimages.com/asr/6fca43e4-052c-43de-9009-478dcc2c00c9_1.a50d81821ae86a50014a2cf7c841effb.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF"
+          />
+        </a>
+      </div>
+      <div
+        className="ProductInfo-content"
+      >
+        <h3
+          className="ProductInfo-title"
+        >
+          <a
+            href="/product/123"
+            onClick={[Function]}
+          >
+            Some Product
+          </a>
+        </h3>
+        <div
+          className="ProductInfo-price"
+        >
+          $
+          123.45
+        </div>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="ProductInfo-description"
+      >
+        Here's some description
+      </div>
+    </div>
+  </div>
+</div>
+`;
