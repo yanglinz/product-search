@@ -11,7 +11,7 @@ using [Walmart Open API](https://developer.walmartlabs.com/).
 
 Here are some links related to the project.
 
-- [Demo](/)
+- [Demo](https://pensive-poincare-124932.netlify.com/)
 - [GraphQL server](https://product-search-walmart.herokuapp.com/graphql/)
 - [Storybook assets](/)
 - [Continuous integration builds](/)
