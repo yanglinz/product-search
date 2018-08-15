@@ -38,7 +38,7 @@ function ProductScreen(props) {
 
       <div className="SearchScreen-results container-fluid">
         <div className="row center-xs">
-          <div className="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+          <div className="col-xs-12 col-sm-8 col-md-6">
             <Query query={PRODUCT_DETAIL_QUERY} variables={{ itemId }}>
               {({ loading, error, data }) => {
                 const { productDetail } = data || {};

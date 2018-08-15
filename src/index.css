@@ -4,9 +4,19 @@ body {
   font-family: sans-serif;
   color: #222;
   line-height: 1.6;
+  background: #dfebed;
 }
 
 a {
   color: #0071ce;
   text-decoration: none;
+}
+
+.App {
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #fff;
+  border-right: 1px solid #e2edef;
+  border-left: 1px solid #e2edef;
 }
