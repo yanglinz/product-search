@@ -5,6 +5,7 @@ import { withRouter } from "react-router-dom";
 import { Query } from "react-apollo";
 
 import Header from "../components/header";
+import Loading from "../components/loading";
 import SearchInput from "../components/search-input";
 import ProductInfo from "../components/product-info";
 import "./search.css";
@@ -33,7 +34,7 @@ function SearchResultList(props) {
       {({ loading, error, data }) => {
         const { searchProducts } = data || {};
 
-        if (loading) return <p>Loading...</p>;
+        if (loading) return <Loading />;
         if (error) return <p>Error :(</p>;
 
         return (

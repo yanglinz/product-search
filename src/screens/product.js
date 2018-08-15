@@ -4,6 +4,7 @@ import gql from "graphql-tag";
 import { Query } from "react-apollo";
 
 import Header from "../components/header";
+import Loading from "../components/loading";
 import ProductInfo from "../components/product-info";
 import ProductRecommendations from "../components/product-recommendations";
 import "./product.css";
@@ -41,7 +42,7 @@ function ProductScreen(props) {
               {({ loading, error, data }) => {
                 const { productDetail } = data || {};
 
-                if (loading) return <p>Loading...</p>;
+                if (loading) return <Loading />;
                 if (error) return <p>Error :(</p>;
 
                 return (
