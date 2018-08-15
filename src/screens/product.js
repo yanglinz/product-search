@@ -6,6 +6,7 @@ import { Query } from "react-apollo";
 import Header from "../components/header";
 import ProductInfo from "../components/product-info";
 import ProductRecommendations from "../components/product-recommendations";
+import "./product.css";
 
 const PRODUCT_DETAIL_QUERY = gql`
   query ProductDetailQuery($itemId: ID!) {
