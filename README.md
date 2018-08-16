@@ -1,6 +1,6 @@
 # Walmart Product Search
 
-[Badges]
+[![CircleCI](https://img.shields.io/circleci/project/github/yanglinz/product-search.svg)](https://circleci.com/gh/yanglinz/product-search)
 
 ## Intro
 
