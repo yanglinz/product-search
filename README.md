@@ -114,8 +114,8 @@ invoke.
 | Run python formatter (docker) | `docker-compose run server pipenv run black server`           |
 | Run storybook                 | `yarn run storybook`                                          |
 | Run storybook (docker)        | `docker-compose run frontend -p 9001:9001 yarn run storybook` |
-| Run tests                     | `yarn test`                                                   |
-| Run storybook (docker)        | `docker-compose run frontend yarn test`                       |
+| Run js tests                  | `yarn test`                                                   |
+| Run js tests (docker)         | `docker-compose run frontend yarn test`                       |
 
 ## License
 
