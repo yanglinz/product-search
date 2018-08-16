@@ -9,7 +9,7 @@ jobs:
       - restore_cache:
           key: node-modules-{{ checksum "yarn.lock" }}
       - run:
-          name: Install Dependencies
+          name: Install dependencies
           command: yarn install
       - save_cache:
           key: node-modules-{{ checksum "yarn.lock" }}
@@ -25,6 +25,18 @@ jobs:
           root: .
           paths:
             - build
+
+  build_server:
+    docker:
+      - image: circleci/python:3.6.1
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: pip install pipenv && pipenv install --dev
+      - run:
+          name: Run tests
+          command: pipenv run pytest .
 
   deploy_server:
     docker:
@@ -55,15 +67,18 @@ workflows:
   main:
     jobs:
       - build_frontend
+      - build_server
       - deploy_frontend:
           requires:
             - build_frontend
+            - build_server
           filters:
             branches:
               only: master
       - deploy_server:
           requires:
             - build_frontend
+            - build_server
           filters:
             branches:
               only: master
