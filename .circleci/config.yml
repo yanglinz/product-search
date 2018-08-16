@@ -16,7 +16,7 @@ jobs:
           paths:
             - node_modules
       - run:
-          name: Run tests 
+          name: Run tests
           command: yarn test
       - run:
           name: Run build
@@ -31,6 +31,9 @@ jobs:
       - image: circleci/python:3.6.4
     steps:
       - checkout
+      - run:
+          name: Setup env vars
+          command: cp product_search/.sample.env product_search/.env
       - run:
           name: Install dependencies
           command: pipenv install --dev
@@ -57,7 +60,8 @@ jobs:
           at: .
       - run:
           name: Install netlify cli
-          command: wget -qO- 'https://cli.netlify.com/download/latest/linux' | tar xz
+          command:
+            wget -qO- 'https://cli.netlify.com/download/latest/linux' | tar xz
       - run:
           name: Deploy to netlify
           command: ./netlifyctl -A $NETLIFY_AUTH_TOKEN -b build deploy
