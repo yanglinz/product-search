@@ -25,6 +25,7 @@ class Product(graphene.ObjectType):
         except walmart.WalmartServiceRecommendationMissingException:
             return []
 
+        recommended = recommended[:10]
         return [Product.from_api_object(p) for p in recommended]
 
     @classmethod

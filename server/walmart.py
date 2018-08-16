@@ -60,7 +60,7 @@ def get_product_recommendations(item_id):
         raise WalmartServiceException(message)
 
     data = resp.json()
-    if isinstance(data, dict) and data.get("errors"):
+    if not isinstance(data, list):
         raise WalmartServiceRecommendationMissingException
 
     return resp.json()
