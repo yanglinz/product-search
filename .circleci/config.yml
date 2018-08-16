@@ -28,12 +28,12 @@ jobs:
 
   build_server:
     docker:
-      - image: circleci/python:3.6.1
+      - image: circleci/python:3.6.4
     steps:
       - checkout
       - run:
           name: Install dependencies
-          command: pip install pipenv && pipenv install --dev
+          command: pipenv install --dev
       - run:
           name: Run tests
           command: pipenv run pytest .
