@@ -40,6 +40,7 @@ def path_transformer(vcr_path):
 vcr = _vcr.VCR(
     path_transformer=path_transformer,
     filter_headers=filter_headers,
+    filter_query_parameters=["apiKey"],
     before_record_response=filter_response_headers,
     record_mode="once",
 )

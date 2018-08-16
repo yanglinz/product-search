@@ -5,7 +5,7 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.19.1]
     method: GET
-    uri: https://api.walmartlabs.com/v1/items/651779321?format=json&apiKey=9sv4rrrm24npjbd6aq9zaffh
+    uri: https://api.walmartlabs.com/v1/items/651779321?format=json&apiKey=placeholder
   response:
     body: {string: '{"itemId":651779321,"parentItemId":651779321,"name":"Refurbished
         iPhone 5S 16GB Gold Unlocked","msrp":129.95,"salePrice":91.99,"upc":"459259973878","categoryPath":"Cell

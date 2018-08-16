@@ -5,7 +5,7 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.19.1]
     method: GET
-    uri: https://api.walmartlabs.com/v1/nbp?format=json&apiKey=9sv4rrrm24npjbd6aq9zaffh&itemId=631796609
+    uri: https://api.walmartlabs.com/v1/nbp?format=json&apiKey=placeholder&itemId=631796609
   response:
     body: {string: "[{\"itemId\":55592117,\"parentItemId\":55592117,\"name\":\"ONN
         Full-Motion Wall Mount for 10\\\"- 50\\\" TVs with Tilt and Swivel Articulating
