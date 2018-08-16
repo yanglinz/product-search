@@ -1,10 +1,21 @@
-import React from "react";
+// @flow
+
+import * as React from "react";
 import { Link } from "react-router-dom";
 
 import ProductPrice from "./product-price";
 import "./product-info.css";
 
-function ProductInfo(props) {
+type ProductInfoProps = {
+  itemId: string,
+  name: string,
+  largeImage: string,
+  shortDescription: string,
+  salePrice: number,
+  msrp?: number
+};
+
+function ProductInfo(props: ProductInfoProps) {
   const { itemId, name, largeImage, shortDescription, salePrice, msrp } = props;
 
   return (

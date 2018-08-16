@@ -1,10 +1,22 @@
-import React from "react";
+// @flow
+
+import * as React from "react";
 
 import SearchInputIcon from "./search-input-icon";
 import "./search-input.css";
 
-class SearchInput extends React.Component {
-  constructor(props) {
+type SearchInputProps = {
+  value?: string,
+  onChange?: string => void,
+  onSubmit: string => void
+};
+
+type SearchInputState = {
+  value: string
+};
+
+class SearchInput extends React.Component<SearchInputProps, SearchInputState> {
+  constructor(props: SearchInputProps) {
     super(props);
     const { value } = props;
     this.state = {
@@ -12,7 +24,7 @@ class SearchInput extends React.Component {
     };
   }
 
-  handleChange = e => {
+  handleChange = (e: SyntheticInputEvent<HTMLInputElement>) => {
     const { onChange } = this.props;
     const newValue = e.target.value;
 
@@ -23,7 +35,7 @@ class SearchInput extends React.Component {
     }
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e: SyntheticEvent<HTMLButtonElement>) => {
     const { onSubmit } = this.props;
 
     if (onSubmit) {

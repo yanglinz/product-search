@@ -1,4 +1,6 @@
-import React from "react";
+// @flow
+
+import * as React from "react";
 import { withRouter } from "react-router-dom";
 
 import Header from "../components/header";
@@ -6,7 +8,15 @@ import SearchInput from "../components/search-input";
 import logo from "../assets/logo.svg";
 import "./home.css";
 
-class HomeScreen extends React.Component {
+type HomeScreenProps = {
+  history: {
+    push: string => void
+  }
+};
+
+type HomeScreenState = {};
+
+class HomeScreen extends React.Component<HomeScreenProps, HomeScreenState> {
   handleSubmit = searchQuery => {
     const { history } = this.props;
 

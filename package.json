@@ -26,6 +26,7 @@
     "@storybook/addon-actions": "^3.4.10",
     "@storybook/addon-storyshots": "^3.4.10",
     "@storybook/react": "^3.4.10",
+    "flow-bin": "^0.78.0",
     "prettier": "^1.14.2",
     "react-test-renderer": "^16.4.2"
   }

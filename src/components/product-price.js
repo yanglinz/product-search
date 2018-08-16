@@ -1,8 +1,10 @@
-import React from "react";
+// @flow
+
+import * as React from "react";
 
 import "./product-price.css";
 
-export function shouldDisplayMsrp(salePrice, msrp) {
+export function shouldDisplayMsrp(salePrice: number, msrp?: number) {
   if (!msrp) {
     return false;
   }
@@ -14,7 +16,12 @@ export function shouldDisplayMsrp(salePrice, msrp) {
   return salePrice / msrp < 0.98;
 }
 
-function ProductPrice(props) {
+type ProductPriceProps = {
+  salePrice: number,
+  msrp?: number
+};
+
+function ProductPrice(props: ProductPriceProps) {
   const { msrp, salePrice } = props;
 
   return (
@@ -23,7 +30,7 @@ function ProductPrice(props) {
       {shouldDisplayMsrp(salePrice, msrp) ? (
         <React.Fragment>
           <span className="ProductPrice-spacing"> List </span>
-          <span className="ProductPrice-msrp">${msrp.toFixed(2)}</span>
+          <span className="ProductPrice-msrp">${msrp && msrp.toFixed(2)}</span>
         </React.Fragment>
       ) : null}
     </div>

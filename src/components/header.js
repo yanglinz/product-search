@@ -1,11 +1,17 @@
-import React from "react";
+// @flow
+
+import * as React from "react";
 import { Link } from "react-router-dom";
 
 import HeaderGithubLogo from "./header-github-logo";
 import logoSmall from "../assets/logo-small.svg";
 import "./header.css";
 
-function Header(props) {
+type HeaderProps = {
+  children?: React.Node
+};
+
+function Header(props: HeaderProps) {
   const ghLink = "https://github.com/yanglinz/product-search";
   return (
     <div className="Header container-fluid">
@@ -22,7 +28,7 @@ function Header(props) {
 
         <div className="Header-github col-xs-3 col-md-2 ">
           <a title="Source code on Github" href={ghLink} target="_blank">
-            <HeaderGithubLogo width="16" height="16" fill="#444" />
+            <HeaderGithubLogo width={16} height={16} fill="#444" />
           </a>
         </div>
       </div>

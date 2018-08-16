@@ -1,4 +1,6 @@
-import React from "react";
+// @flow
+
+import * as React from "react";
 import * as Qs from "qs";
 import gql from "graphql-tag";
 import { withRouter } from "react-router-dom";
@@ -10,6 +12,25 @@ import ServiceError from "../components/service-error";
 import SearchInput from "../components/search-input";
 import ProductInfo from "../components/product-info";
 import "./search.css";
+
+type Product = {
+  itemId: string,
+  name: string,
+  largeImage: string,
+  shortDescription: string,
+  salePrice: number,
+  msrp?: number
+};
+
+type SearchResults = {
+  searchProducts?: Product[]
+};
+
+type SearchResultsQuery = {
+  loading: boolean,
+  error: boolean,
+  data?: SearchResults
+};
 
 const SEARCH_RESULTS_QUERY = gql`
   query SearchResultsQuery($query: String!) {
@@ -24,7 +45,11 @@ const SEARCH_RESULTS_QUERY = gql`
   }
 `;
 
-function SearchResultList(props) {
+type SearchResultListProps = {
+  searchQuery?: string
+};
+
+function SearchResultList(props: SearchResultListProps) {
   const { searchQuery } = props;
 
   if (!searchQuery) {
@@ -33,7 +58,7 @@ function SearchResultList(props) {
 
   return (
     <Query query={SEARCH_RESULTS_QUERY} variables={{ query: searchQuery }}>
-      {({ loading, error, data }) => {
+      {({ loading, error, data }: SearchResultsQuery) => {
         const { searchProducts } = data || {};
 
         if (loading) return <Loading />;
@@ -44,11 +69,12 @@ function SearchResultList(props) {
 
         return (
           <div className="SearchResultList">
-            {searchProducts.map(p => (
-              <div className="SearchResultList-item" key={p.itemId}>
-                <ProductInfo {...p} />
-              </div>
-            ))}
+            {searchProducts &&
+              searchProducts.map(p => (
+                <div className="SearchResultList-item" key={p.itemId}>
+                  <ProductInfo {...p} />
+                </div>
+              ))}
           </div>
         );
       }}
@@ -56,13 +82,32 @@ function SearchResultList(props) {
   );
 }
 
-export function parseSearchQuery(location) {
+type SearchLocation = {
+  search: string
+};
+
+export function parseSearchQuery(location: SearchLocation) {
   const queryParamsStr = location.search.replace("?", "");
   const queryParams = Qs.parse(queryParamsStr);
   return queryParams.q;
 }
 
-class SearchScreen extends React.Component {
+type SearchScreenProps = {
+  location: SearchLocation,
+  history: {
+    push: string => void
+  }
+};
+
+type SearchScreenState = {
+  inputValue: string,
+  searchValue: string
+};
+
+class SearchScreen extends React.Component<
+  SearchScreenProps,
+  SearchScreenState
+> {
   state = {
     inputValue: "",
     searchValue: ""

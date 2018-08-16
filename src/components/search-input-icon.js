@@ -1,6 +1,14 @@
-import React from "react";
+// @flow
 
-function SearchInputIcon(props) {
+import * as React from "react";
+
+type SearchInputIconProps = {
+  width?: number,
+  height?: number,
+  fill: string
+};
+
+function SearchInputIcon(props: SearchInputIconProps) {
   const { width, height, fill } = props;
   return (
     <svg

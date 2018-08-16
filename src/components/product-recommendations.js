@@ -1,11 +1,21 @@
-import React from "react";
+// @flow
+
+import * as React from "react";
 import { Link } from "react-router-dom";
 
 import ProductPrice from "./product-price";
 import "./product-recommendations.css";
 
-function ProductRecommendation(props) {
-  const { itemId, name, mediumImage, msrp, salePrice } = props;
+type ProductRecommendationProps = {
+  itemId: string,
+  name: string,
+  mediumImage: string,
+  salePrice: number,
+  msrp?: number
+};
+
+function ProductRecommendation(props: ProductRecommendationProps) {
+  const { itemId, name, mediumImage, salePrice, msrp } = props;
   return (
     <div className="ProductRecommendation">
       <div className="row">
@@ -33,7 +43,11 @@ function ProductRecommendation(props) {
   );
 }
 
-function ProductRecommendations(props) {
+type ProductRecommendationsProps = {
+  recommendedProducts?: ProductRecommendationProps[]
+};
+
+function ProductRecommendations(props: ProductRecommendationsProps) {
   const { recommendedProducts } = props;
 
   const hasRecommendedProducts =
@@ -47,9 +61,10 @@ function ProductRecommendations(props) {
       <div className="row">
         <h4 className="ProductRecommendations-title">Customers also bought:</h4>
 
-        {recommendedProducts.map(p => (
-          <ProductRecommendation key={p.itemId} {...p} />
-        ))}
+        {recommendedProducts &&
+          recommendedProducts.map(p => (
+            <ProductRecommendation key={p.itemId} {...p} />
+          ))}
       </div>
     </div>
   );

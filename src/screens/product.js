@@ -1,4 +1,6 @@
-import React from "react";
+// @flow
+
+import * as React from "react";
 import { withRouter } from "react-router-dom";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
@@ -9,6 +11,34 @@ import ServiceError from "../components/service-error";
 import ProductInfo from "../components/product-info";
 import ProductRecommendations from "../components/product-recommendations";
 import "./product.css";
+
+type RecommendedProduct = {
+  itemId: string,
+  name: string,
+  mediumImage: string,
+  salePrice: number,
+  msrp?: number
+};
+
+type Product = {
+  itemId: string,
+  name: string,
+  largeImage: string,
+  shortDescription: string,
+  salePrice: number,
+  msrp?: number,
+  recommendedProducts?: RecommendedProduct[]
+};
+
+type ProductDetailData = {
+  productDetail?: Product
+};
+
+type ProductDetailQuery = {
+  loading: boolean,
+  error: boolean,
+  data?: ProductDetailData
+};
 
 const PRODUCT_DETAIL_QUERY = gql`
   query ProductDetailQuery($itemId: ID!) {
@@ -30,7 +60,15 @@ const PRODUCT_DETAIL_QUERY = gql`
   }
 `;
 
-function ProductScreen(props) {
+type ProductScreenProps = {
+  match: {
+    params: {
+      itemId: string
+    }
+  }
+};
+
+function ProductScreen(props: ProductScreenProps) {
   const { match } = props;
   const { itemId } = match.params;
 
@@ -42,7 +80,7 @@ function ProductScreen(props) {
         <div className="row center-xs">
           <div className="col-xs-12 col-sm-8 col-md-6">
             <Query query={PRODUCT_DETAIL_QUERY} variables={{ itemId }}>
-              {({ loading, error, data }) => {
+              {({ loading, error, data }: ProductDetailQuery) => {
                 const { productDetail } = data || {};
 
                 if (loading) return <Loading />;

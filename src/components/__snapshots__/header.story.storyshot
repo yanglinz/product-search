@@ -37,9 +37,9 @@ exports[`Storyshots Header default 1`] = `
         title="Source code on Github"
       >
         <svg
-          height="16"
+          height={16}
           viewBox="0 0 24 24"
-          width="16"
+          width={16}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -100,9 +100,9 @@ exports[`Storyshots Header with children 1`] = `
         title="Source code on Github"
       >
         <svg
-          height="16"
+          height={16}
           viewBox="0 0 24 24"
-          width="16"
+          width={16}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path

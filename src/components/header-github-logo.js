@@ -1,6 +1,14 @@
-import React from "react";
+// @flow
 
-function HeaderGithubLogo(props) {
+import * as React from "react";
+
+type HeaderGithubLogoProps = {
+  width?: number,
+  height?: number,
+  fill: string
+};
+
+function HeaderGithubLogo(props: HeaderGithubLogoProps) {
   const { width, height, fill } = props;
   return (
     <svg

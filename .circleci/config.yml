@@ -16,6 +16,9 @@ jobs:
           paths:
             - node_modules
       - run:
+          name: Run flow 
+          command: yarn flow check 
+      - run:
           name: Run tests
           command: yarn test
       - run:

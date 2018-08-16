@@ -1,8 +1,14 @@
-import React from "react";
+// @flow
+
+import * as React from "react";
 
 import "./service-error.css";
 
-function ServiceError(props) {
+type ServiceErrorProps = {
+  message: string
+};
+
+function ServiceError(props: ServiceErrorProps) {
   const { message } = props;
   return (
     <div className="ServiceError">
