@@ -13,7 +13,7 @@ class Product(graphene.ObjectType):
     msrp = graphene.Float()
     standard_ship_rate = graphene.Float()
     short_description = graphene.String()
-    thumb_image = graphene.String()
+    thumbnail_image = graphene.String()
     medium_image = graphene.String()
     large_image = graphene.String()
     is_two_day_shipping_eligible = graphene.Boolean()
@@ -39,7 +39,7 @@ class Product(graphene.ObjectType):
             standard_ship_rate=api_object.get("standardShipRate"),
             is_two_day_shipping_eligible=api_object.get("isTwoDayShippingEligible"),
             short_description=api_object.get("shortDescription"),
-            thumb_image=api_object.get("thumbnailImage"),
+            thumbnail_image=api_object.get("thumbnailImage"),
             medium_image=api_object.get("mediumImage"),
             large_image=api_object.get("largeImage"),
         )
