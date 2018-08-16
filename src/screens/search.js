@@ -56,6 +56,12 @@ function SearchResultList(props) {
   );
 }
 
+export function parseSearchQuery(location) {
+  const queryParamsStr = location.search.replace("?", "");
+  const queryParams = Qs.parse(queryParamsStr);
+  return queryParams.q;
+}
+
 class SearchScreen extends React.Component {
   state = {
     inputValue: "",
@@ -78,12 +84,8 @@ class SearchScreen extends React.Component {
 
   componentDidMount() {
     const { location } = this.props;
-    const queryParamsStr = location.search.replace("?", "");
-    const queryParams = Qs.parse(queryParamsStr);
-    this.setState({
-      inputValue: queryParams.q,
-      searchValue: queryParams.q
-    });
+    const query = parseSearchQuery(location);
+    this.setState({ inputValue: query, searchValue: query });
   }
 
   render() {
