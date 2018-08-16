@@ -19,6 +19,7 @@ const SEARCH_RESULTS_QUERY = gql`
       largeImage
       shortDescription
       salePrice
+      msrp
     }
   }
 `;

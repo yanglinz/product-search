@@ -18,11 +18,13 @@ const PRODUCT_DETAIL_QUERY = gql`
       largeImage
       shortDescription
       salePrice
+      msrp
       recommendedProducts {
         itemId
         name
         mediumImage
         salePrice
+        msrp
       }
     }
   }

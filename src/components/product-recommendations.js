@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import ProductPrice from "./product-price";
 import "./product-recommendations.css";
 
 function ProductRecommendation(props) {
-  const { itemId, name, mediumImage, salePrice } = props;
+  const { itemId, name, mediumImage, msrp, salePrice } = props;
   return (
     <div className="ProductRecommendation">
       <div className="row">
@@ -24,7 +25,7 @@ function ProductRecommendation(props) {
           </div>
 
           <div className="ProductRecommendation-price">
-            ${salePrice.toFixed(2)}
+            <ProductPrice salePrice={salePrice} msrp={msrp} />
           </div>
         </div>
       </div>

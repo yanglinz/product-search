@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import ProductPrice from "./product-price";
 import "./product-info.css";
 
 function ProductInfo(props) {
-  const { itemId, name, largeImage, shortDescription, salePrice } = props;
+  const { itemId, name, largeImage, shortDescription, salePrice, msrp } = props;
 
   return (
     <div className="ProductInfo container-fluid">
@@ -23,7 +24,9 @@ function ProductInfo(props) {
           <h3 className="ProductInfo-title">
             <Link to={`/product/${itemId}`}>{name}</Link>
           </h3>
-          <div className="ProductInfo-price">${salePrice.toFixed(2)}</div>
+          <div className="ProductInfo-price">
+            <ProductPrice salePrice={salePrice} msrp={msrp} />
+          </div>
         </div>
       </div>
 

@@ -45,8 +45,16 @@ exports[`Storyshots ProductInfo default 1`] = `
         <div
           className="ProductInfo-price"
         >
-          $
-          123.45
+          <div
+            className="ProductPrice"
+          >
+            <span
+              className="ProductPrice-price"
+            >
+              $
+              123.45
+            </span>
+          </div>
         </div>
       </div>
     </div>

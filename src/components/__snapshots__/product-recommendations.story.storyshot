@@ -56,8 +56,16 @@ exports[`Storyshots ProductRecommendation default 1`] = `
             <div
               className="ProductRecommendation-price"
             >
-              $
-              123.45
+              <div
+                className="ProductPrice"
+              >
+                <span
+                  className="ProductPrice-price"
+                >
+                  $
+                  123.45
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -98,8 +106,16 @@ exports[`Storyshots ProductRecommendation default 1`] = `
             <div
               className="ProductRecommendation-price"
             >
-              $
-              123.45
+              <div
+                className="ProductPrice"
+              >
+                <span
+                  className="ProductPrice-price"
+                >
+                  $
+                  123.45
+                </span>
+              </div>
             </div>
           </div>
         </div>

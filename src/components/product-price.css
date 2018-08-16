@@ -1,0 +1,12 @@
+.ProductPrice-price {
+  font-weight: bold;
+}
+
+.ProductPrice-spacing {
+  padding-left: 3px;
+}
+
+.ProductPrice-msrp {
+  color: #6d6e71;
+  text-decoration: line-through;
+}

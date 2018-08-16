@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ProductPrice default 1`] = `
+<div
+  className="ProductPrice"
+>
+  <span
+    className="ProductPrice-price"
+  >
+    $
+    42.99
+  </span>
+  <span
+    className="ProductPrice-spacing"
+  >
+     List 
+  </span>
+  <span
+    className="ProductPrice-msrp"
+  >
+    $
+    142.99
+  </span>
+</div>
+`;
+
+exports[`Storyshots ProductPrice without msrp 1`] = `
+<div
+  className="ProductPrice"
+>
+  <span
+    className="ProductPrice-price"
+  >
+    $
+    42.99
+  </span>
+</div>
+`;
