@@ -6,6 +6,7 @@
     "start": "react-scripts start",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build": "react-scripts build",
+    "build:storybook": "build-storybook -o build/storybook",
     "test": "react-scripts test --env=jsdom",
     "format": "prettier --write './*.{js,md}' './src/**/*.{js,css}'"
   },

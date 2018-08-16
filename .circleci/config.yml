@@ -21,6 +21,9 @@ jobs:
       - run:
           name: Run build
           command: yarn run build
+      - run:
+          name: Run storybook build
+          command: yarn run build:storybook
       - persist_to_workspace:
           root: .
           paths:
