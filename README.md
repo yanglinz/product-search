@@ -101,6 +101,22 @@ yarn start
 Finally, once both servers are running, navigate to `localhost:3000` with a
 browser to view the application.
 
+### Local Development Commands
+
+Once the application dependencies are setup, here are some commands you can
+invoke.
+
+| Description                   | Command                                                       |
+| ----------------------------- | ------------------------------------------------------------- |
+| Run python tests              | `pipenv run pytest server`                                    |
+| Run python tests (docker)     | `docker-compose run server pipenv run pytest server`          |
+| Run python formatter          | `pipenv run black server`                                     |
+| Run python formatter (docker) | `docker-compose run server pipenv run black server`           |
+| Run storybook                 | `yarn run storybook`                                          |
+| Run storybook (docker)        | `docker-compose run frontend -p 9001:9001 yarn run storybook` |
+| Run tests                     | `yarn test`                                                   |
+| Run storybook (docker)        | `docker-compose run frontend yarn test`                       |
+
 ## License
 
 This project is licensed under MIT license.
