@@ -21,7 +21,7 @@ const PRODUCT_DETAIL_QUERY = gql`
       recommendedProducts {
         itemId
         name
-        largeImage
+        mediumImage
         salePrice
       }
     }

@@ -14,7 +14,7 @@ Here are some links related to the project.
 - [Demo](https://pensive-poincare-124932.netlify.com/)
 - [GraphQL server](https://product-search-walmart.herokuapp.com/graphql/)
 - [Storybook assets](/)
-- [Continuous integration builds](/)
+- [Continuous integration builds](https://circleci.com/gh/yanglinz/product-search)
 
 ## Local Development
 

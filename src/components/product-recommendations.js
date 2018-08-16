@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./product-recommendations.css";
 
 function ProductRecommendation(props) {
-  const { itemId, name, largeImage, salePrice } = props;
+  const { itemId, name, mediumImage, salePrice } = props;
   return (
     <div className="ProductRecommendation">
       <div className="row">
@@ -12,7 +12,7 @@ function ProductRecommendation(props) {
           <Link to={`/product/${itemId}`}>
             <img
               className="ProductRecommendation-thumb-img"
-              src={largeImage}
+              src={mediumImage}
               alt={name}
             />
           </Link>
